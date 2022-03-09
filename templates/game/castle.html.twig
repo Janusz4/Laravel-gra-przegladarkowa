@@ -1,0 +1,44 @@
+$sql = "SELECT id_zamku FROM wioski WHERE id_uzytkownika = ".$_SESSION['id'];
+$result = mysqli_query($polaczenie, $sql);
+if (mysqli_num_rows($result) == 1){
+while ($row = mysqli_fetch_assoc($result)) {
+$id_zamku = $row['id_zamku'];
+}
+}
+
+$sql = "SELECT MAX(poziom) FROM zamek";
+$result = mysqli_query($polaczenie, $sql);
+$row = mysqli_fetch_assoc($result);
+$max = $row["MAX(poziom)"];
+
+$sql = "SELECT * FROM zamek WHERE id_zamku = $id_zamku"
+$result = mysqli_query($polaczenie, $sql)
+if (mysqli_num_rows($result) == 1){
+$row = mysqli_fetch_assoc($result)
+<div class="row">
+    <div class="col-sm-11 col-11 budynek-nazwa">Zamek</div>
+    <div class="col-sm-1 col-1">
+        <a href = " " class="zamknij" onclick="closeB(zamek_info)">
+            <i class="fa fa-window-close"></i>
+        </a>
+    </div>
+</div>
+<p>
+    Poziom: $row['poziom']
+</p>
+<p>Koszt ulepszenia
+
+if($row['poziom'] < $max){
+
+    <p> Drewno:
+        $row['drewno']
+    </p>
+    <p> Kamień:
+        $row['kamien']
+    </p>
+    <button class="btn-ulepsz" id="ulepsz_zamek">Ulepsz</button>
+}
+else{
+    <p>Osiągnięto maksymalny poziom budynku.</p>
+}
+</br>

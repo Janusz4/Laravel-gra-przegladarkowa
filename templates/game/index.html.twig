@@ -52,7 +52,7 @@
                 <p>Atakuj</p>
             </div>
         </div>
-        <div id="zamek_info" class="popup_content col-12 col-md-6">Zamek, poziom, koszt ulepszenia<a href = " " onclick="close(zamek)">Close</a></div>
+        <div id="zamek_info" class="popup_content col-12 col-md-6">Zamek, poziom, koszt ulepszenia<a href = "" onclick="closeB(zamek)">Close</a></div>
         <div id="tartak_info" class="popup_content col-12 col-md-6">Tartak</div>
         <div id="kamieniolom_info" class="popup_content col-12 col-md-6">kamieniolom</div>
         <div id="pole_info" class="popup_content col-12 col-md-6">Pole</div>
@@ -63,4 +63,9 @@
         <div id="fade" class="black_overlay"></div>
     </div>
 </main>
+
+{% block script %}
+    <script src="js/script.js"></script>
+{% endblock %}
+
 {% endblock %}

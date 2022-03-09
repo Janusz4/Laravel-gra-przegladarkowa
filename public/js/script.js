@@ -1,8 +1,11 @@
 
 $(document).ready(function() {
     aktualizujSurowce();
+
+    console.log("Script working properly");
+
     $("#zamek").click(function (){
-        $("#zamek_info").load("zamek_info.php");
+        $("#zamek_info").load("/castle");
         aktualizujSurowce();
     });
     $("#tartak").click(function (){
@@ -36,7 +39,7 @@ $(document).ready(function() {
 //ULEPSANIE BUDYNKÓW
 $(document).on('click', '#ulepsz_zamek', function(){
         $("#zamek_info").load("zamek_ulepsz.php");
-        $("#zamek_info").load("zamek_info.php");
+        $("#zamek_info").load("/castle");
         aktualizujSurowce();
 });
 
@@ -84,11 +87,11 @@ function aktualizujSurowce() {
           document.getElementById("surowce").innerHTML = this.responseText;
       }
   };
-  xmlhttp.open("GET", "surowce.php", true);
+  xmlhttp.open("GET", "/materials", true);
   xmlhttp.send();
 }
 
-function close(budynek){
+function closeB(budynek){
     document.getElementById(budynek).style.display='none';
 }
 

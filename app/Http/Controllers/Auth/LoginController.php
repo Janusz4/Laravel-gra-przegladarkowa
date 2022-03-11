@@ -43,12 +43,19 @@ class LoginController extends Controller
     protected function authenticated()
     {
         $user = Auth::user();
-        if ($user->admin) {
-            // an admin
-            $this->redirectTo = '/admin';
+        if ($user->banned) {
+            Auth::logout();
+            
+            return view('index')
+                ->withErrors(["email"=>"Twoje konto zostało zablokowane."]);
         } else {
-            // it's a user
-            $this->redirectTo = '/game';
+            if ($user->admin) {
+                // an admin
+                $this->redirectTo = '/admin';
+            } else {
+                // it's a user
+                 $this->redirectTo = '/game';
+            }
         }
     }
 }

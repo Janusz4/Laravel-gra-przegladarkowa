@@ -21,7 +21,7 @@ h3
     top: 25%;
     left: 25%;
     padding: 16px;
-    border: 16px solid #39a5f1;
+    border: 12px solid #39a5f1;
     background-color: #2F3336;
     z-index: 1002;
     overflow: auto;
@@ -131,10 +131,6 @@ h1.logo
 	font-size: 30px;
 }
 
-.btn-ulepsz{
-	background-color: #262B30;
-}
-
 td{
 	padding: 10px;
 }
@@ -163,4 +159,29 @@ label{
 
 .ban{
 	color: #8E9198;
+}
+
+.logout {
+	background-color: transparent;
+	border-width: 0;
+	color: #efefef;
+}
+
+.logout:hover {
+	text-decoration: underline;
+}
+
+.login-form {
+	padding-top: calc(0.375rem + 1px);
+	padding-bottom: calc(0.375rem + 1px);
+}
+
+.form-control {
+	height: 33px;
+	font-size: 1.6rem;
+}
+
+.btn-primary {
+	border-color: #2e6da4;
+	font-size: 1.6rem;
 }

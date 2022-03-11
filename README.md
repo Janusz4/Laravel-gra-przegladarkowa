@@ -27,7 +27,7 @@ W grze występuje 4 rodzaje budynków. Zamek pozwala na ulepszanie innych budynk
 *Ranking*</br>
 W rankingu znajduje się top 100 graczy pod względem punktów chwały.</br>
 
- ![Administracja](/img/panel.png)</br>
+ ![Administracja](/img/panel.PNG)</br>
 *Administracja*</br>
 Będąc zalogowanym jako administrator mamy możliwość banowania i odbanowywania użytkowników. Do szybszego wyszukiwania graczy służy odpowiednie pole tekstowe.</br>
 
